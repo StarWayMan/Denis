@@ -20,6 +20,7 @@ test.describe("Обратная связь", () => {
         await page.click(sendFeedbackButton);
         expect(await page.textContent(emptyPhoneHint)).toBe("Обязательное для заполнения поле");
     });
+    sssafadg
 
     test('Передача валидной контактной информации для Фитбека', async ({ page }) => { 
         await page.fill(phoneFeedbackTextBox, "+79787430664");

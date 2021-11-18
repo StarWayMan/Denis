@@ -15,17 +15,16 @@ test.describe("Сьют 1", () => {
         expect(await page.isVisible(contactModal)).toBe(true);
     });
     
-    test('Открываем модалку -> Отобразился корректный телефон', async ({ page, context, baseURL }) => {
+    test('Открываем модалку -> Отобразился корректный телефон', async ({ page }) => {
         expect(await page.textContent(telephoneNumber)).toBe("+7 123 456-78-90");
     });
 
-    test('Открываем модалку -> В ссылке введен корректный номер', async ({ page, context, baseURL }) => {
+    test('Открываем модалку -> В ссылке введен корректный номер', async ({ page }) => {
         expect(await page.getAttribute(telephoneNumber, "href")).toBe("tel:+71234567890");
     });
 
-    test('Открываем модалку -> Проверка работы кнопки', async ({ page, context, baseURL }) => {
+    test('Открываем модалку -> Проверка работы кнопки', async ({ page }) => {
         await page.click(closeButton)
         expect(await page.waitForSelector(contactModal, { state: 'hidden' })).toBe(null);
-        await page.pause();
     });
 });

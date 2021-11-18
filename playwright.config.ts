@@ -19,7 +19,7 @@ const config: PlaywrightTestConfig = {
 	expect: {
 		toMatchSnapshot: { threshold: 0.9 },
 	},
-	testDir: 'tests',
+	testDir: './tests',
 	reporter: [['line'], ['allure-playwright']],
 	retries: 1,
 };

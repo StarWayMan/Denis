@@ -7,7 +7,7 @@ const phoneFeedbackTextBox = `xpath=//input[@autocomplete="tel"]`;
 const nameFeedbackTextBox = `xpath=//input[@type="text"]`;
 const feedbackModal = `xpath=//div[@class="lc-form-modal__container"]`;
 
-test.describe("Обратная связь", () => {
+test.describe('Обратная связь', () => {
     test.beforeEach(async ({ page, baseURL }) => {
         await page.goto(baseURL);
     });

@@ -11,7 +11,7 @@ test.describe("Сьют 1", () => {
         await page.click(openContactButton);
     });
 
-    test('Нажимаем кнопку Показать телефон -> Открылась модальное окно с контактной информацией', async ({ page, context, baseURL }) => {
+    test('Нажимаем кнопку Показать телефон -> Открылась модальное окно с контактной информацией', async ({ page}) => {
         expect(await page.isVisible(contactModal)).toBe(true);
     });
     
@@ -26,5 +26,6 @@ test.describe("Сьют 1", () => {
     test('Открываем модалку -> Проверка работы кнопки', async ({ page }) => {
         await page.click(closeButton)
         expect(await page.waitForSelector(contactModal, { state: 'hidden' })).toBe(null);
+        await page.pause();
     });
 });

@@ -7,7 +7,7 @@ const phoneFeedbackTextBox = `xpath=//input[@autocomplete="tel"]`;
 const nameFeedbackTextBox = `xpath=//input[@type="text"]`;
 const feedbackModal = `xpath=//div[@class="lc-form-modal__container"]`;
 
-test.describe("Обратная связь", () => {
+test.describe('Обратная связь', () => {
     test.beforeEach(async ({ page, baseURL }) => {
         await page.goto(baseURL);
     });
@@ -20,7 +20,6 @@ test.describe("Обратная связь", () => {
         await page.click(sendFeedbackButton);
         expect(await page.textContent(emptyPhoneHint)).toBe("Обязательное для заполнения поле");
     });
-    sssafadg
 
     test('Передача валидной контактной информации для Фитбека', async ({ page }) => { 
         await page.fill(phoneFeedbackTextBox, "+79787430664");

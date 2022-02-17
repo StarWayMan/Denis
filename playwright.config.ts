@@ -21,7 +21,7 @@ const config: PlaywrightTestConfig = {
 	},
 	testDir: './tests',
 	reporter: [['line'], ['allure-playwright']],
-	retries: 1,
+	retries: 0,
 };
 
 export default config;

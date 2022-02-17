@@ -1,8 +1,5 @@
 import { test, expect, Locator } from '@playwright/test';
-<<<<<<< HEAD
-=======
 
->>>>>>> 63d9173 (Последнее сохранение Проверки корзины)
 const checkoutButton = `xpath=//button[@class="lc-button lc-button_theme_base lc-button_size_m lc-button_type_button lc-header__cart-button"]`;
 const checkoutModalImage =`xpath=//div[@class="lc-header__cart-popup lc-header__cart-popup_is-expanded"]`;
 const checkoutBuyButton = `xpath=//button[@class="turbo-button turbo-button_theme_text-blue turbo-button_size_none turbo-cart-item__remove"]`;

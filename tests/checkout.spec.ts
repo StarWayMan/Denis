@@ -110,7 +110,7 @@ test.describe("Проверка Корзины", () => {
         await expect (buttonPlaceOrder).toHaveText(`Оформить заказ: 3198\u00A0₽`);
     }); 
 
-    test.only('Проверка отображаемой стоймости двух товаров, кнопка Оформить заказ', async ({ page }) => {
+    test('Проверка отображаемой стоймости двух товаров, кнопка Оформить заказ', async ({ page }) => {
         const buyButton = page.locator(`button >> text=Купить`);
         await buyButton.nth(0).click();
         await buyButton.nth(0).click();
@@ -118,5 +118,5 @@ test.describe("Проверка Корзины", () => {
         const buttonPlaceOrder = page.locator(buttonPlaceOrderSelector);
         await expect (buttonPlaceOrder).toContainText(`6098\u00A0₽`);
     }); 
-    
+
 });
